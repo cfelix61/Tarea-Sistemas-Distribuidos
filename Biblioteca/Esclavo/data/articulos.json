@@ -1,0 +1,19 @@
+[
+    {
+      "titulo": "La Revolución Digital",
+      "autor": "Laura Martínez",
+      "genero": "tecnología",
+      "tipo_documento": "artículo",
+      "descripcion": "Artículo sobre los avances en la tecnología digital durante las últimas décadas.",
+      "score": 0
+    },
+    {
+      "titulo": "Economía Global en el Siglo XXI",
+      "autor": "David Fernández",
+      "genero": "economía",
+      "tipo_documento": "artículo",
+      "descripcion": "Análisis de la situación económica global y sus perspectivas.",
+      "score": 0
+    }
+  ]
+  

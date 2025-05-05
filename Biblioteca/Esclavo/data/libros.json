@@ -1,0 +1,19 @@
+[
+    {
+      "titulo": "Física para Todos",
+      "autor": "Juan Pérez",
+      "genero": "ciencia ficción",
+      "tipo_documento": "libro",
+      "descripcion": "Un libro sobre los principios básicos de la física en el universo.",
+      "score": 0
+    },
+    {
+      "titulo": "Historia de la Tierra",
+      "autor": "Carlos García",
+      "genero": "historia",
+      "tipo_documento": "libro",
+      "descripcion": "Una narración de los eventos más importantes en la historia de la Tierra.",
+      "score": 0
+    }
+  ]
+  

@@ -1,0 +1,19 @@
+[
+    {
+      "titulo": "El Universo y sus Misterios",
+      "autor": "Eduardo Gómez",
+      "genero": "ciencia ficción",
+      "tipo_documento": "video",
+      "descripcion": "Un documental sobre los misterios del universo y la física cuántica.",
+      "score": 0
+    },
+    {
+      "titulo": "El Futuro de la Inteligencia Artificial",
+      "autor": "María Rodríguez",
+      "genero": "tecnología",
+      "tipo_documento": "video",
+      "descripcion": "Entrevista con expertos sobre los avances futuros de la IA.",
+      "score": 0
+    }
+  ]
+  

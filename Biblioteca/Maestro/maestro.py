@@ -1,66 +1,82 @@
-from flask import Flask, request, jsonify
 import requests
 import time
+import sys
+import os
+sys.path.append(os.path.abspath(".."))
 
-app = Flask(__name__)
+from log_client import enviar_log
 
-# Distribución de esclavos por tipo de documento
+# Esclavos mapeados por tipo de documento
 ESCLAVOS = {
-    "libro": "http://localhost:5001",
-    "tesis": "http://localhost:5002",
-    "video": "http://localhost:5003",
-    "articulo": "http://localhost:5004"
+    "libro": "http://localhost:5001/query",
+    "tesis": "http://localhost:5002/query",
+    "articulo": "http://localhost:5003/query",
+    "video": "http://localhost:5004/query"
 }
 
-# Preferencias por rango etario
-PREFERENCIAS = {
-    "10-15": "ciencia ficcion",
-    "16-25": "tecnologia",
-    "26-99": "investigacion"
-}
+def buscar(query, tipo_doc, edad):
+    t_ini = time.time()
+    resultados = []
 
-@app.route("/query")
-def query():
-    titulo = request.args.get("titulo")
-    tipo_doc = request.args.get("tipo_doc")
-    edad = int(request.args.get("edad", 18))
-    rango = "10-15" if edad <= 15 else "16-25" if edad <= 25 else "26-99"
-    preferencia = PREFERENCIAS[rango]
-
-    start_time = time.time()
-
-    if titulo:
-        resultados = []
+    # Buscar por título (broadcast a todos los esclavos)
+    if query:
         for url in ESCLAVOS.values():
-            r = requests.get(f"{url}/buscar", params={"titulo": titulo, "edad": edad})
-            resultados.extend(r.json())
+            try:
+                # Cambié a POST en lugar de GET
+                r = requests.post(url, json={"query": query, "edad": edad})  # Cambié a POST
+                if r.ok:
+                    resultados += r.json()
+            except Exception as e:
+                print("Error con esclavo:", e)
+
+    # Buscar por tipo de documento
     elif tipo_doc:
-        resultados = []
         tipos = tipo_doc.split("+")
         for tipo in tipos:
             url = ESCLAVOS.get(tipo)
             if url:
-                r = requests.get(f"{url}/buscar", params={"titulo": titulo or "", "edad": edad})
-                resultados.extend(r.json())
+                try:
+                    r = requests.post(url, json={"query": "", "edad": edad})  # Cambié a POST
+                    if r.ok:
+                        resultados += r.json()
+                except Exception as e:
+                    print(f"Error con el esclavo de tipo {tipo}:", e)
+
+    # Ordenar por puntaje (en base a los resultados)
+    resultados.sort(key=lambda x: x.get("score", 0), reverse=True)
+
+    # Log de la operación
+    t_fin = time.time()
+    enviar_log({
+        "inicio": t_ini,
+        "fin": t_fin,
+        "maquina": "maestro",
+        "tipo": "maestro",
+        "query": query,
+        "tiempo_total": round(t_fin - t_ini, 4),
+        "score": len(resultados),
+        "edad": edad,
+        "rango": get_rango_etario(edad)
+    })
+
+    return resultados
+
+def get_rango_etario(edad):
+    if edad < 16:
+        return "menor de 16"
+    elif edad <= 25:
+        return "16-25"
+    elif edad <= 40:
+        return "26-40"
     else:
-        return jsonify({"error": "Debe indicar un titulo o tipo_doc"}), 400
-
-    resultados.sort(key=lambda x: -x['ranking'])
-
-    # Log RMI client (simplificado)
-    import Pyro5.api
-    with Pyro5.api.Proxy("PYRO:logger@localhost:9090") as remote_logger:
-        remote_logger.log({
-            "inicio": start_time,
-            "fin": time.time(),
-            "maquina": "localhost",
-            "tipo": "maestro",
-            "query": request.query_string.decode(),
-            "score": resultados[0]['ranking'] if resultados else 0,
-            "edad": edad
-        })
-
-    return jsonify(resultados)
+        return "mayor de 40"
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    while True:
+        query = input("Ingrese búsqueda (Vacío para buscar por tipo): ")
+        tipo_doc = input("Ingrese tipo de documento (o deje vacío para buscar por título): ")
+        edad = int(input("Edad del usuario: "))
+        r = buscar(query, tipo_doc, edad)
+        print(f"Resultados ({len(r)}):")
+        for i in r:
+            print("-", i["titulo"])

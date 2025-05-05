@@ -2,80 +2,52 @@ from flask import Flask, request, jsonify
 import json
 import time
 import sys
+import os
+sys.path.append(os.path.abspath(".."))
 
-TIPO = sys.argv[1] if len(sys.argv) > 1 else "libro"
-PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 5001
-FILE = f"data/{TIPO}s.json"
+from log_client import enviar_log
 
 app = Flask(__name__)
+PORT = 5001  
 
-PREFERENCIAS = {
-    "10-15": "ciencia ficcion",
-    "16-25": "tecnologia",
-    "26-99": "investigacion"
-}
-
-def calcular_ranking(titulo, documento, preferencia):
-    score = 0
-    for termino in titulo.lower().split():
-        if termino in documento['titulo'].lower():
-            score += 1
-    if preferencia.lower() in documento['genero'].lower():
-        score += 2
-    return score
-
-@app.route("/buscar")
+@app.route('/query', methods=['POST'])
 def buscar():
-    titulo = request.args.get("titulo", "")
-    edad = int(request.args.get("edad", 18))
-    rango = "10-15" if edad <= 15 else "16-25" if edad <= 25 else "26-99"
-    preferencia = PREFERENCIAS[rango]
+    datos = request.json
+    query = datos['query']
+    edad = datos.get('edad', 20)
 
-    start_time = time.time()
-    with open(FILE, encoding="utf-8") as f:
-        data = json.load(f)
+    t_ini = time.time()
 
-    resultados = []
-    for doc in data:
-        rank = calcular_ranking(titulo, doc, preferencia)
-        if rank > 0:
-            doc['ranking'] = rank
-            resultados.append(doc)
+    with open("data/libros.json") as f:
+        libros = json.load(f)
 
-    # Log RMI client (simplificado)
-    import Pyro5.api
-    with Pyro5.api.Proxy("PYRO:logger@localhost:9090") as remote_logger:
-        remote_logger.log({
-            "inicio": start_time,
-            "fin": time.time(),
-            "maquina": f"localhost:{PORT}",
-            "tipo": "esclavo",
-            "query": titulo,
-            "score": max([d['ranking'] for d in resultados], default=0),
-            "edad": edad
-        })
+    resultados = [l for l in libros if query.lower() in l['titulo'].lower()]
+    score = len(resultados)
+    t_fin = time.time()
+
+    enviar_log({
+        "inicio": t_ini,
+        "fin": t_fin,
+        "maquina": f"esclavo:{PORT}",
+        "tipo": "esclavo",
+        "query": query,
+        "tiempo_total": round(t_fin - t_ini, 4),
+        "score": score,
+        "edad": edad,
+        "rango": get_rango_etario(edad)
+    })
 
     return jsonify(resultados)
 
+def get_rango_etario(edad):
+    if edad < 16:
+        return "menor de 16"
+    elif edad <= 25:
+        return "16-25"
+    elif edad <= 40:
+        return "26-40"
+    else:
+        return "mayor de 40"
+
 if __name__ == "__main__":
-    app.run(port=PORT)
-
-# rmi_logger_server.py
-import Pyro5.api
-from datetime import datetime
-
-@Pyro5.api.expose
-class Logger:
-    def __init__(self):
-        self.logs = []
-
-    def log(self, entry):
-        entry["timestamp"] = datetime.now().isoformat()
-        print("LOG:", entry)
-        self.logs.append(entry)
-
-
-daemon = Pyro5.server.Daemon(port=9090)
-uri = daemon.register(Logger, "logger")
-print("Logger RMI server listo en:", uri)
-daemon.requestLoop()
+    app.run(port=5001)

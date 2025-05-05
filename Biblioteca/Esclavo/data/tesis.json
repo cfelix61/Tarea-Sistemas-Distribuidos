@@ -1,0 +1,19 @@
+[
+    {
+      "titulo": "Desarrollo de Inteligencia Artificial en la Medicina",
+      "autor": "Ana Sánchez",
+      "genero": "tecnología",
+      "tipo_documento": "tesis",
+      "descripcion": "Una investigación sobre el uso de IA para el diagnóstico médico.",
+      "score": 0
+    },
+    {
+      "titulo": "Impacto Social de las Redes Sociales",
+      "autor": "Luis Ramírez",
+      "genero": "psicología",
+      "tipo_documento": "tesis",
+      "descripcion": "Estudio sobre cómo las redes sociales afectan la salud mental.",
+      "score": 0
+    }
+  ]
+  
