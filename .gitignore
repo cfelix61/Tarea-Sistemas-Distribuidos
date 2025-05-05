@@ -1,2 +1,4 @@
 rmi_logger_client.py
 rmi_logger_server.py
+Maestro/maestro_pruebaRMI.py
+Esclavo/esclavo_libros_pruebaRMI.py
