@@ -18,7 +18,7 @@ def buscar(query, tipo_doc, edad):
     t_ini = time.time()
     resultados = []
 
-    # Buscar por título (broadcast a todos los esclavos)
+    # Buscar por título, broadcast a todos los esclavos
     if query:
         for url in ESCLAVOS.values():
             try:
@@ -29,7 +29,7 @@ def buscar(query, tipo_doc, edad):
             except Exception as e:
                 print("Error con esclavo:", e)
 
-    # Buscar por tipo de documento
+    # Buscar por tipo de docu, multicast a los esclavos por siaca manolo
     elif tipo_doc:
         tipos = tipo_doc.split("+")
         for tipo in tipos:
@@ -42,12 +42,12 @@ def buscar(query, tipo_doc, edad):
                 except Exception as e:
                     print(f"Error con el esclavo de tipo {tipo}:", e)
 
-    # Ordenar por puntaje (en base a los resultados)
+    # Ordenar por puntaje 
     resultados.sort(key=lambda x: x.get("score", 0), reverse=True)
 
     # Log de la operación
     t_fin = time.time()
-    enviar_log({
+    enviar_log({ # invoco la funcion que envia los datos al servidor RMI de log
         "inicio": t_ini,
         "fin": t_fin,
         "maquina": "maestro",

@@ -25,7 +25,7 @@ def buscar():
     score = len(resultados)
     t_fin = time.time()
 
-    enviar_log({
+    enviar_log({#invoco la weaita de func que envia los datos al servidor RMI de log
         "inicio": t_ini,
         "fin": t_fin,
         "maquina": f"esclavo:{PORT}",

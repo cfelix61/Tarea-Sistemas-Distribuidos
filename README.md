@@ -55,16 +55,21 @@ python esclavo/esclavo_videos.py
 1. Iniciar el Name Server en Powershell:
 -   python -m Pyro5.nameserver
 
-1. Ejecutar los esclavos (cada uno en una terminal diferente y desde la carpeta Esclavo):
+2. Ejecutar el server de los logs en la carpeta Biblioteca
+- python log_server.py
+
+3. Ejecutar los esclavos (cada uno en una terminal diferente y desde la carpeta Esclavo):
 python esclavo_libros.py
 python esclavo_tesis.py
 python esclavo_articulos.py
 python esclavo_videos.py
 
 
-2. Ejecutar el maestro (terminal distinta y carpeta Maestro):
+4. Ejecutar el maestro (terminal distinta y carpeta Maestro):
 -   python maestro.py
 
+5. Ejecutar log_viewer en distinta terminal, es de ejecución única, no queda esperando respuesta. Actualiza el .txt que guarda los Logs.
+-   python log_viewer.py
 ## Consultas 
 - Buscar por título:
     Ingrese búsqueda: Historia de la Tierra
