@@ -66,7 +66,7 @@ def buscar(query, tipo_doc, edad):
         "fin": t_fin,
         "maquina": "maestro",
         "tipo": "maestro",
-        "query": query,
+        "query": query+ " " + tipo_doc,
         "tiempo_total": round(t_fin - t_ini, 4),
         "score": len(resultados),
         "edad": edad,

@@ -75,7 +75,7 @@ def buscar():
     resultados = []
 
     if query.strip() == "":
-        for articulo in articulos:
+        for articulo in articulos:# si no hay query, se devuelven todos los documentos correspondientes a los tipos de documento
             score = calcular_score(articulo, "", rango)
             resultado = articulo.copy()
             resultado["score"] = score
@@ -83,7 +83,7 @@ def buscar():
     else:
         for articulo in articulos:
             score = calcular_score(articulo, query, rango)
-            if score > 0:
+            if score > 0:# en este caso hay match, por lo que se agrega al resultado a devolver
                 resultado = articulo.copy()
                 resultado['score'] = score
                 resultados.append(resultado)
