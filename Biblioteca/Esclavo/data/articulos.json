@@ -1,19 +1,58 @@
 [
-    {
-      "titulo": "La Revolución Digital",
-      "autor": "Laura Martínez",
-      "genero": "tecnología",
-      "tipo_documento": "artículo",
-      "descripcion": "Artículo sobre los avances en la tecnología digital durante las últimas décadas.",
-      "score": 0
-    },
-    {
-      "titulo": "Economía Global en el Siglo XXI",
-      "autor": "David Fernández",
-      "genero": "economía",
-      "tipo_documento": "artículo",
-      "descripcion": "Análisis de la situación económica global y sus perspectivas.",
-      "score": 0
-    }
-  ]
-  
+  {
+    "titulo": "La Revolucion Digital",
+    "autor": "Laura Martinez",
+    "genero": "tecnologia",
+    "tipo_documento": "articulo",
+    "descripcion": "Articulo sobre los avances en la tecnologia digital durante las ultimas decadas.",
+    "score": 0
+  },
+  {
+    "titulo": "Economia Global en el Siglo XXI",
+    "autor": "David Fernandez",
+    "genero": "economia",
+    "tipo_documento": "articulo",
+    "descripcion": "Analisis de la situacion economica global y sus perspectivas.",
+    "score": 0
+  },
+  {
+    "titulo": "La historia del cambio climatico",
+    "autor": "Veronica Soto",
+    "genero": "medio ambiente",
+    "tipo_documento": "articulo",
+    "descripcion": "Un repaso cronologico de como ha evolucionado nuestra comprension del cambio climatico.",
+    "score": 0
+  },
+  {
+    "titulo": "Blockchain y seguridad de datos",
+    "autor": "Ignacio Rivas",
+    "genero": "tecnologia",
+    "tipo_documento": "articulo",
+    "descripcion": "Exploracion sobre como la tecnologia blockchain puede mejorar la seguridad de la informacion.",
+    "score": 0
+  },
+  {
+    "titulo": "El papel del arte en tiempos de crisis",
+    "autor": "Claudia Benitez",
+    "genero": "arte",
+    "tipo_documento": "articulo",
+    "descripcion": "Analisis sobre como el arte refleja y responde a contextos sociales dificiles.",
+    "score": 0
+  },
+  {
+    "titulo": "Filosofia en la era digital",
+    "autor": "Tomas Aguilar",
+    "genero": "filosofia",
+    "tipo_documento": "articulo",
+    "descripcion": "Reflexion sobre los dilemas eticos y filosoficos que plantea la tecnologia moderna.",
+    "score": 0
+  },
+  {
+    "titulo": "Microbioma humano: el ecosistema olvidado",
+    "autor": "Gabriela Cortes",
+    "genero": "ciencia",
+    "tipo_documento": "articulo",
+    "descripcion": "Articulo divulgativo sobre la importancia del microbioma en la salud humana.",
+    "score": 0
+  }
+]

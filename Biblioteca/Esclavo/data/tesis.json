@@ -1,19 +1,58 @@
 [
-    {
-      "titulo": "Desarrollo de Inteligencia Artificial en la Medicina",
-      "autor": "Ana Sánchez",
-      "genero": "tecnología",
-      "tipo_documento": "tesis",
-      "descripcion": "Una investigación sobre el uso de IA para el diagnóstico médico.",
-      "score": 0
-    },
-    {
-      "titulo": "Impacto Social de las Redes Sociales",
-      "autor": "Luis Ramírez",
-      "genero": "psicología",
-      "tipo_documento": "tesis",
-      "descripcion": "Estudio sobre cómo las redes sociales afectan la salud mental.",
-      "score": 0
-    }
-  ]
-  
+  {
+    "titulo": "Desarrollo de Inteligencia Artificial en la Medicina",
+    "autor": "Ana Sanchez",
+    "genero": "tecnologia",
+    "tipo_documento": "tesis",
+    "descripcion": "Una investigacion sobre el uso de IA para el diagnostico medico.",
+    "score": 0
+  },
+  {
+    "titulo": "Impacto Social de las Redes Sociales",
+    "autor": "Luis Ramirez",
+    "genero": "educacion",
+    "tipo_documento": "tesis",
+    "descripcion": "Estudio sobre como las redes sociales afectan la salud mental.",
+    "score": 0
+  },
+  {
+    "titulo": "Optimizacion Energetica en Edificios Inteligentes",
+    "autor": "Maria Paredes",
+    "genero": "ingenieria",
+    "tipo_documento": "tesis",
+    "descripcion": "Propuesta de soluciones de eficiencia energetica aplicadas a edificios automatizados.",
+    "score": 0
+  },
+  {
+    "titulo": "Analisis del Lenguaje Natural en la Educacion Virtual",
+    "autor": "Diego Herrera",
+    "genero": "educacion",
+    "tipo_documento": "tesis",
+    "descripcion": "Uso de tecnicas de PLN para evaluar la participacion estudiantil en entornos virtuales.",
+    "score": 0
+  },
+  {
+    "titulo": "Modelos Predictivos para la Agricultura de Precision",
+    "autor": "Camila Rios",
+    "genero": "educacion",
+    "tipo_documento": "tesis",
+    "descripcion": "Desarrollo de modelos de aprendizaje automatico para optimizar cultivos y riego.",
+    "score": 0
+  },
+  {
+    "titulo": "La Musica como Herramienta Terapeutica en Pacientes con Alzheimer",
+    "autor": "Javier Torres",
+    "genero": "educacion",
+    "tipo_documento": "tesis",
+    "descripcion": "Investigacion sobre los efectos positivos de la musicoterapia en pacientes con deterioro cognitivo.",
+    "score": 0
+  },
+  {
+    "titulo": "Ciberseguridad en Infraestructuras Criticas",
+    "autor": "Natalia Fuentes",
+    "genero": "tecnologia",
+    "tipo_documento": "tesis",
+    "descripcion": "Evaluacion de riesgos y estrategias de proteccion para sistemas criticos en entornos digitales.",
+    "score": 0
+  }
+]

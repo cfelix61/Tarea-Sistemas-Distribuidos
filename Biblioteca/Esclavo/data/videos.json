@@ -1,19 +1,50 @@
 [
-    {
-      "titulo": "El Universo y sus Misterios",
-      "autor": "Eduardo Gómez",
-      "genero": "ciencia ficción",
-      "tipo_documento": "video",
-      "descripcion": "Un documental sobre los misterios del universo y la física cuántica.",
-      "score": 0
-    },
-    {
-      "titulo": "El Futuro de la Inteligencia Artificial",
-      "autor": "María Rodríguez",
-      "genero": "tecnología",
-      "tipo_documento": "video",
-      "descripcion": "Entrevista con expertos sobre los avances futuros de la IA.",
-      "score": 0
-    }
-  ]
-  
+  {
+    "titulo": "El Universo y sus Misterios",
+    "autor": "Eduardo Gomez",
+    "genero": "sci-fi",
+    "tipo_documento": "video",
+    "descripcion": "Un documental sobre los misterios del universo y la fisica cuantica.",
+    "score": 0
+  },
+  {
+    "titulo": "El Futuro de la Inteligencia Artificial",
+    "autor": "Maria Rodriguez",
+    "genero": "tecnologia",
+    "tipo_documento": "video",
+    "descripcion": "Entrevista con expertos sobre los avances futuros de la IA.",
+    "score": 0
+  },
+  {
+    "titulo": "La historia de Internet",
+    "autor": "Luis Fernandez",
+    "genero": "tecnologia",
+    "tipo_documento": "video",
+    "descripcion": "Desde los primeros protocolos hasta la web moderna, un recorrido por la evolucion de Internet.",
+    "score": 0
+  },
+  {
+    "titulo": "Mentes Brillantes: Nikola Tesla",
+    "autor": "Isabel Rios",
+    "genero": "biografia",
+    "tipo_documento": "video",
+    "descripcion": "Un documental sobre la vida y los inventos de Nikola Tesla.",
+    "score": 0
+  },
+  {
+    "titulo": "Colonizando Marte",
+    "autor": "Raul Contreras",
+    "genero": "sci-fi",
+    "tipo_documento": "video",
+    "descripcion": "Una vision futurista sobre como la humanidad podria establecerse en Marte.",
+    "score": 0
+  },
+  {
+    "titulo": "La historia del comunismo",
+    "autor": "Carlos Mendez",
+    "genero": "historia",
+    "tipo_documento": "video",
+    "descripcion": "Un repaso detallado de los origenes, desarrollo y legado del comunismo en el mundo.",
+    "score": 0
+  }
+]

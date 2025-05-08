@@ -1,19 +1,66 @@
 [
-    {
-      "titulo": "Física para Todos",
-      "autor": "Juan Pérez",
-      "genero": "ciencia ficción",
-      "tipo_documento": "libro",
-      "descripcion": "Un libro sobre los principios básicos de la física en el universo.",
-      "score": 0
-    },
-    {
-      "titulo": "Historia de la Tierra",
-      "autor": "Carlos García",
-      "genero": "historia",
-      "tipo_documento": "libro",
-      "descripcion": "Una narración de los eventos más importantes en la historia de la Tierra.",
-      "score": 0
-    }
-  ]
-  
+  {
+    "titulo": "Fisica para Todos",
+    "autor": "Juan Perez",
+    "genero": "educacion",
+    "tipo_documento": "libro",
+    "descripcion": "Un libro sobre los principios basicos de la fisica en el universo.",
+    "score": 0
+  },
+  {
+    "titulo": "Fisica para Todos los generos",
+    "autor": "Juan Perez",
+    "genero": "educacion",
+    "tipo_documento": "libro",
+    "descripcion": "Un libro sobre los principios basicos de la fisica en el universo.",
+    "score": 0
+  },
+  {
+    "titulo": "La historia del pensamiento cientifico",
+    "autor": "Mariana Salas",
+    "genero": "historia",
+    "tipo_documento": "libro",
+    "descripcion": "Un recorrido por las ideas cientificas que cambiaron nuestra vision del mundo.",
+    "score": 0
+  },
+  {
+    "titulo": "Inteligencia Artificial: Teoria y Practica",
+    "autor": "Fernando Ruiz",
+    "genero": "tecnologia",
+    "tipo_documento": "libro",
+    "descripcion": "Guia completa sobre los fundamentos y aplicaciones modernas de la IA.",
+    "score": 0
+  },
+  {
+    "titulo": "El Jardin de los Suenos Cuanticos",
+    "autor": "Sofia Martinez",
+    "genero": "sci-fi",
+    "tipo_documento": "libro",
+    "descripcion": "Una novela que combina emociones humanas con teorias cuanticas en un futuro distopico.",
+    "score": 0
+  },
+  {
+    "titulo": "Etica para el Siglo XXI",
+    "autor": "Andres Leiva",
+    "genero": "filosofia",
+    "tipo_documento": "libro",
+    "descripcion": "Reflexiones sobre la moral, la responsabilidad y los dilemas eticos contemporaneos.",
+    "score": 0
+  },
+  {
+    "titulo": "La Historia del Arte en Occidente",
+    "autor": "Lucia Valdes",
+    "genero": "arte",
+    "tipo_documento": "libro",
+    "descripcion": "Desde el arte rupestre hasta el arte moderno, una exploracion profunda del arte occidental.",
+    "score": 0
+  },
+  {
+    "titulo": "Historia de la Tierra",
+    "autor": "Carlos Garcia",
+    "genero": "historia",
+    "tipo_documento": "libro",
+    "descripcion": "Una narracion de los eventos mas importantes en la historia de la Tierra.",
+    "score": 0
+  }
+]
