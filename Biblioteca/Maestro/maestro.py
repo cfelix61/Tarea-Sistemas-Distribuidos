@@ -75,7 +75,16 @@ if __name__ == "__main__":
     while True:
         query = input("Ingrese búsqueda (Vacío para buscar por tipo): ")
         tipo_doc = input("Ingrese tipo de documento (o deje vacío para buscar por título): ")
-        edad = int(input("Edad del usuario: "))
+        
+        
+        entrada = input("Entregue su edad (por defecto 0): ").strip()
+        edad = int(entrada) if entrada.isdigit() else 0
+        
+        while (edad <= 0 or edad > 120 or edad == ""):
+            print("Edad no válida. Ingrese nuevamente.")
+            entrada = input("Entregue su edad (por defecto 0): ").strip()
+            edad = int(entrada) if entrada.isdigit() else 0
+
         r = buscar(query, tipo_doc, edad)
         print(f"Resultados ({len(r)}):")
         for i in r:
