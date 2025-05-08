@@ -8,10 +8,10 @@ from log_client import enviar_log
 
 # Esclavos mapeados por tipo de documento
 ESCLAVOS = {
-    "libro": "http://localhost:5001/query",
+    "libros": "http://localhost:5001/query",
     "tesis": "http://localhost:5002/query",
-    "articulo": "http://localhost:5003/query",
-    "video": "http://localhost:5004/query"
+    "articulos": "http://localhost:5003/query",
+    "videos": "http://localhost:5004/query"
 }
 
 def buscar(query, tipo_doc, edad):
