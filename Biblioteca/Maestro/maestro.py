@@ -1,17 +1,23 @@
+from flask import Flask, request, jsonify
 import requests
 import time
 import sys
 import os
+from dotenv import load_dotenv
 sys.path.append(os.path.abspath(".."))
 
 from log_client import enviar_log
 
-# Esclavos mapeados por tipo de documento
+app = Flask(__name__)
+PORT = 5000
+
+load_dotenv()  # Cargar las variables del archivo .env
+
 ESCLAVOS = {
-    "libros": "http://localhost:5001/query",
-    "tesis": "http://localhost:5002/query",
-    "articulos": "http://localhost:5003/query",
-    "videos": "http://localhost:5004/query"
+    "libros": os.getenv("ESCLAVO_LIBROS"),
+    "tesis": os.getenv("ESCLAVO_TESIS"),
+    "articulos": os.getenv("ESCLAVO_ARTICULOS"),
+    "videos": os.getenv("ESCLAVO_VIDEOS")
 }
 
 def get_rango_etario(edad):
@@ -24,49 +30,52 @@ def get_rango_etario(edad):
     else:
         return "mayor de 40"
 
-def buscar(query, tipo_doc, edad):
+def distribuir_busqueda(query, tipo_doc, edad):
     t_ini = time.time()
     resultados = []
     rango_etario = get_rango_etario(edad)
 
-    # Buscar por título, broadcast a todos los esclavos
-    if query:
+    if query and not tipo_doc:
         for url in ESCLAVOS.values():
             try:
-                r = requests.post(url, json={"query": query, "edad": edad})  # Cambié a POST
+                r = requests.post(url, json={"query": query, "edad": edad})
                 if r.ok:
                     resultados += r.json()
             except Exception as e:
                 print("Error con esclavo:", e)
 
-    # Buscar por tipo de documento, multicast a los esclavos
-    elif tipo_doc:
+    elif tipo_doc and not query:
         tipos = tipo_doc.split("+")
         for tipo in tipos:
             url = ESCLAVOS.get(tipo)
             if url:
                 try:
-                    r = requests.post(url, json={"query": "", "edad": edad})  # Cambié a POST
+                    r = requests.post(url, json={"query": "", "edad": edad})
                     if r.ok:
                         resultados += r.json()
                 except Exception as e:
                     print(f"Error con el esclavo de tipo {tipo}:", e)
 
-    # Si no se encontraron resultados, mostrar mensaje
-    if not resultados:
-        print("No se encontraron resultados.")
-    
-    # Ordenar por puntaje
+    elif tipo_doc and query != "":
+        tipos = tipo_doc.split("+")
+        for tipo in tipos:
+            url = ESCLAVOS.get(tipo)
+            if url:
+                try:
+                    r = requests.post(url, json={"query": query, "edad": edad})
+                    if r.ok:
+                        resultados += r.json()
+                except Exception as e:
+                    print(f"Error con el esclavo de tipo {tipo}:", e)
     resultados.sort(key=lambda x: x.get("score", 0), reverse=True)
 
-    # Log de la operación
     t_fin = time.time()
-    enviar_log({  # invoco la funcion que envia los datos al servidor RMI de log
+    enviar_log({
         "inicio": t_ini,
         "fin": t_fin,
-        "maquina": "maestro",
+        "maquina": f"maestro:{PORT}",
         "tipo": "maestro",
-        "query": query+ " " + tipo_doc,
+        "query": query + " " + tipo_doc,
         "tiempo_total": round(t_fin - t_ini, 4),
         "score": len(resultados),
         "edad": edad,
@@ -75,25 +84,25 @@ def buscar(query, tipo_doc, edad):
 
     return resultados
 
+@app.route("/buscar", methods=["POST"])
+def buscar():
+    data = request.json
+    query = data.get("query", "").strip()
+    tipo_doc = data.get("tipo_doc", "").strip()
+    edad = data.get("edad", 0)
+
+    if not query and not tipo_doc:
+        tipo_doc = "libros+tesis+articulos+videos"
+
+    try:
+        edad = int(edad)
+        if edad <= 0 or edad > 120:
+            return jsonify({"error": "Edad no válida"}), 400
+    except:
+        return jsonify({"error": "Edad no válida"}), 400
+
+    resultados = distribuir_busqueda(query, tipo_doc, edad)
+    return jsonify(resultados)
+
 if __name__ == "__main__":
-    while True:
-        query = input("Ingrese búsqueda (Vacío para buscar por tipo): ")
-        tipo_doc = input("Ingrese tipo de documento (o deje vacío para buscar por título): ")
-
-        if query == "" and tipo_doc == "":
-            print("Se entregaran todos los documentos.")
-            tipo_doc = "libros+tesis+articulos+videos"
-
-        entrada = input("Entregue su edad (por defecto 0): ").strip()
-
-        edad = int(entrada) if entrada.isdigit() else 0
-
-        while (edad <= 0 or edad > 120 or edad == ""):
-            print("Edad no válida. Ingrese nuevamente.")
-            entrada = input("Entregue su edad (por defecto 0): ").strip()
-            edad = int(entrada) if entrada.isdigit() else 0
-
-        r = buscar(query, tipo_doc, edad)
-        print(f"Resultados ({len(r)}):")
-        for i in r:
-            print(f"- {i['titulo']} (Score: {i['score']})")
+    app.run(port=PORT)

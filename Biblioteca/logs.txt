@@ -1,0 +1,56 @@
+{'inicio': 1746581715.3875928, 'fin': 1746581715.3875928, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 1, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746581721.9827764, 'fin': 1746581721.9897976, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.007, 'score': 0, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746581728.5580769, 'fin': 1746581728.5580769, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 0, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746581735.1317124, 'fin': 1746581735.13271, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.001, 'score': 0, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746581713.334391, 'fin': 1746581739.6855552, 'maquina': 'maestro', 'tipo': 'maestro', 'query': 'Historia de la Tierra', 'tiempo_total': 26.3512, 'score': 1, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746582055.196914, 'fin': 1746582055.196914, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746582053.1422656, 'fin': 1746582059.7429905, 'maquina': 'maestro', 'tipo': 'maestro', 'query': '', 'tiempo_total': 6.6007, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746734132.055079, 'fin': 1746734132.0630755, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.008, 'score': 1, 'edad': 14, 'rango': 'menor de 16'}
+{'inicio': 1746734138.643348, 'fin': 1746734138.643348, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 0, 'edad': 14, 'rango': 'menor de 16'}
+{'inicio': 1746734145.1876597, 'fin': 1746734145.1977465, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0101, 'score': 0, 'edad': 14, 'rango': 'menor de 16'}
+{'inicio': 1746734151.774461, 'fin': 1746734151.7824638, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.008, 'score': 0, 'edad': 14, 'rango': 'menor de 16'}
+{'inicio': 1746734129.9696016, 'fin': 1746734156.3228729, 'maquina': 'maestro', 'tipo': 'maestro', 'query': 'Historia de la Tierra', 'tiempo_total': 26.3533, 'score': 1, 'edad': 14, 'rango': 'menor de 16'}
+{'inicio': 1746734184.3639257, 'fin': 1746734184.3639257, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 24, 'rango': '16-25'}
+{'inicio': 1746734182.322758, 'fin': 1746734188.8904548, 'maquina': 'maestro', 'tipo': 'maestro', 'query': '', 'tiempo_total': 6.5677, 'score': 2, 'edad': 24, 'rango': '16-25'}
+{'inicio': 1746735535.8611767, 'fin': 1746735535.8611767, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746735533.8392394, 'fin': 1746735540.3856966, 'maquina': 'maestro', 'tipo': 'maestro', 'query': '', 'tiempo_total': 6.5465, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746735921.2947502, 'fin': 1746735921.2947502, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746735927.8278365, 'fin': 1746735927.8288326, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.001, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746735919.2757115, 'fin': 1746735932.3543243, 'maquina': 'maestro', 'tipo': 'maestro', 'query': '', 'tiempo_total': 13.0786, 'score': 4, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746736156.357191, 'fin': 1746736156.357191, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746736162.9169831, 'fin': 1746736162.9169831, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746736169.4734597, 'fin': 1746736169.4734597, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746736176.0165806, 'fin': 1746736176.0165806, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746736154.33737, 'fin': 1746736180.545506, 'maquina': 'maestro', 'tipo': 'maestro', 'query': '', 'tiempo_total': 26.2081, 'score': 8, 'edad': 25, 'rango': '16-25'}
+{'inicio': 1746738615.0772648, 'fin': 1746738615.0772648, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746738621.7075758, 'fin': 1746738621.7075758, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746738613.0375645, 'fin': 1746738626.2375264, 'maquina': 'maestro', 'tipo': 'maestro', 'query': '', 'tiempo_total': 13.2, 'score': 4, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746825642.6370866, 'fin': 1746825642.6381173, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.001, 'score': 14, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746825649.2147162, 'fin': 1746825649.2226167, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0079, 'score': 15, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746825655.7871547, 'fin': 1746825655.7951517, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.008, 'score': 8, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746825662.3796167, 'fin': 1746825662.3882132, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0086, 'score': 7, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746825640.6062477, 'fin': 1746825666.9453392, 'maquina': 'maestro', 'tipo': 'maestro:5000', 'query': 'Historia de la Tierra ', 'tiempo_total': 26.3391, 'score': 20, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826681.6453972, 'fin': 1746826681.646389, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.001, 'score': 4, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826688.2308347, 'fin': 1746826688.2308347, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 8, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826694.8287203, 'fin': 1746826694.8287203, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0, 'score': 2, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826701.406246, 'fin': 1746826701.4073548, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': '', 'tiempo_total': 0.0011, 'score': 0, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826679.5929, 'fin': 1746826705.9432507, 'maquina': 'maestro:5000', 'tipo': 'maestro', 'query': ' libros+tesis+articulos+videos', 'tiempo_total': 26.3504, 'score': 28, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826777.8715367, 'fin': 1746826777.8715367, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 14, 'edad': 17, 'rango': '16-25'}
+{'inicio': 1746826784.4720078, 'fin': 1746826784.4720078, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 15, 'edad': 17, 'rango': '16-25'}
+{'inicio': 1746826791.0474012, 'fin': 1746826791.0474012, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 8, 'edad': 17, 'rango': '16-25'}
+{'inicio': 1746826797.650644, 'fin': 1746826797.650644, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'Historia de la Tierra', 'tiempo_total': 0.0, 'score': 7, 'edad': 17, 'rango': '16-25'}
+{'inicio': 1746826775.8506083, 'fin': 1746826802.2027218, 'maquina': 'maestro:5000', 'tipo': 'maestro', 'query': 'Historia de la Tierra ', 'tiempo_total': 26.3521, 'score': 20, 'edad': 17, 'rango': '16-25'}
+{'inicio': 1746826915.0549004, 'fin': 1746826915.0559013, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': 'La historia de Internet', 'tiempo_total': 0.001, 'score': 12, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826921.6485643, 'fin': 1746826921.6485643, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': 'La historia de Internet', 'tiempo_total': 0.0, 'score': 15, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826928.2335253, 'fin': 1746826928.2335253, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'La historia de Internet', 'tiempo_total': 0.0, 'score': 8, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826934.826482, 'fin': 1746826934.826482, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'La historia de Internet', 'tiempo_total': 0.0, 'score': 9, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826913.0149837, 'fin': 1746826939.3707223, 'maquina': 'maestro:5000', 'tipo': 'maestro', 'query': 'La historia de Internet ', 'tiempo_total': 26.3557, 'score': 20, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826982.145588, 'fin': 1746826982.145588, 'maquina': 'esclavo:5001', 'tipo': 'esclavo', 'query': 'la historia del Internet', 'tiempo_total': 0.0, 'score': 12, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826988.7328308, 'fin': 1746826988.7339308, 'maquina': 'esclavo:5002', 'tipo': 'esclavo', 'query': 'la historia del Internet', 'tiempo_total': 0.0011, 'score': 13, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826995.3214805, 'fin': 1746826995.3214805, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'la historia del Internet', 'tiempo_total': 0.0, 'score': 8, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746827001.914909, 'fin': 1746827001.914909, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'la historia del Internet', 'tiempo_total': 0.0, 'score': 7, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746826980.102703, 'fin': 1746827006.4630303, 'maquina': 'maestro:5000', 'tipo': 'maestro', 'query': 'la historia del Internet videos', 'tiempo_total': 26.3603, 'score': 18, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746827384.1763306, 'fin': 1746827384.1763306, 'maquina': 'esclavo:5004', 'tipo': 'esclavo', 'query': 'historia del internet', 'tiempo_total': 0.0, 'score': 4, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746827382.1284397, 'fin': 1746827388.7245078, 'maquina': 'maestro:5000', 'tipo': 'maestro', 'query': 'historia del internet videos', 'tiempo_total': 6.5961, 'score': 2, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746827446.8236659, 'fin': 1746827446.8246634, 'maquina': 'esclavo:5003', 'tipo': 'esclavo', 'query': 'La historia de Internet', 'tiempo_total': 0.001, 'score': 8, 'edad': 16, 'rango': '16-25'}
+{'inicio': 1746827444.777146, 'fin': 1746827451.3730652, 'maquina': 'maestro:5000', 'tipo': 'maestro', 'query': 'La historia de Internet articulos', 'tiempo_total': 6.5959, 'score': 6, 'edad': 16, 'rango': '16-25'}
