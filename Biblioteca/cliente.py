@@ -22,7 +22,12 @@ def solicitar_datos():
         "edad": edad
     }
 
-def mostrar_resultados(resultados):
+def mostrar_resultados(resultados, query=""):
+    if query:
+        titulos = [doc["titulo"].lower() for doc in resultados]
+        if query.lower() not in titulos:
+            print("\nNo se encontró una coincidencia exacta.")
+            print("Aquí hay algunas recomendaciones similares:\n")
     print(f"\nResultados ({len(resultados)}):")
     for i in resultados:
         print(f"- {i['titulo']} (Score: {i['score']})")
@@ -33,11 +38,11 @@ def main():
     while True:
         try:
             datos = solicitar_datos()
-
             response = requests.post("http://localhost:5000/buscar", json=datos)
 
             if response.ok:
-                mostrar_resultados(response.json())
+                resultados = response.json()
+                mostrar_resultados(resultados, datos["query"])
             else:
                 print("Error:", response.text)
 

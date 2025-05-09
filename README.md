@@ -68,6 +68,9 @@ python esclavo_videos.py
 4. Ejecutar el maestro (terminal distinta y carpeta Maestro):
 -   python maestro.py
 
+5. Ejecutar el cliente del maestro (carpeta biblioteca):
+-   python cliente.py
+
 5. Ejecutar log_viewer en distinta terminal, es de ejecución única, no queda esperando respuesta. Actualiza el .txt que guarda los Logs.
 -   python log_viewer.py
 ## Consultas 
