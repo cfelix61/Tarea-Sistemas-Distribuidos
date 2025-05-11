@@ -1,5 +1,11 @@
 # Tarea-Sistemas-Distribuidos
 """
+## Integrantes:
+
+- **Manuel Arriagada Pérez**
+
+- **Cristian Oyarce Soto**
+
 biblioteca/
 ├── esclavo/
 │   ├── esclavo_libros.py         # HTTP server
